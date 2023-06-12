@@ -41,7 +41,17 @@ class Character {
     this.element.style.top = `${this.top}px`;
   }
 
-  didCollide(obstacle) {}
+  didCollide(obstacle) {
+    const playerRect = this.element.getBoundingClientRect();
+    const obstacleRect = obstacle.element.getBoundingClientRect();
+
+    return !(
+      playerRect.right < obstacleRect.left ||
+      playerRect.left > obstacleRect.right ||
+      playerRect.bottom < obstacleRect.top ||
+      playerRect.top > obstacleRect.bottom
+    );
+  }
 
   didPowerUp(powerUp) {}
 }
