@@ -1,5 +1,6 @@
 class Character {
   constructor(gamePort, left, top, width, height, imgSrc) {
+    console.log("Character constructor called");
     this.gamePort = gamePort;
     this.left = left;
     this.top = top;
@@ -17,9 +18,28 @@ class Character {
     this.gamePort.appendChild(this.element);
   }
 
-  move() {}
+  move() {
+    this.left += this.directionX;
+    this.top += this.directionY;
+    if (this.left < 10) {
+      this.left = 10;
+    }
+    if (this.top < 10) {
+      this.top = 10;
+    }
+    if (this.left > this.gamePort.offsetWidth - this.width - 10) {
+      this.left = this.gamePort.offsetWidth - this.width - 10;
+    }
+    if (this.top > this.gamePort.offsetHeight - this.height - 10) {
+      this.top = this.gamePort.offsetHeight - this.height - 10;
+    }
+    this.updatePosition();
+  }
 
-  updatePosition() {}
+  updatePosition() {
+    this.element.style.left = `${this.left}px`;
+    this.element.style.top = `${this.top}px`;
+  }
 
   didCollide(obstacle) {}
 

@@ -7,8 +7,8 @@ class Game {
       this.gamePort,
       50,
       300,
-      150,
-      150,
+      100,
+      100,
       "/images/main-character.png"
     );
     this.height = 500;
@@ -25,6 +25,7 @@ class Game {
     this.gamePort.style.height = `${this.height}px`;
     this.startScreen.style.display = "none";
     this.gamePort.style.display = "block";
+    this.gameLoop();
   }
 
   gameLoop() {
@@ -40,7 +41,7 @@ class Game {
   }
 
   update() {
-
+    this.character.move();
   }
 
   endGame() {}
