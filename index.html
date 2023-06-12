@@ -11,25 +11,32 @@
     <main>
       <h1>Emily in Berlin</h1>
       <div id="game-start-screen">
-        <div id="emily-image"><img src="" alt class="emily-image"/></div>
-        <button id="start-button">You Go, Girl!</button>
-        <div id ="instructions">
-            <h3>How to Play</h3>
-            <p>After burning all bridges in Paris, Emily decided to jump on the Berlin bandwagon. Help her avoid classic Berlin <em>obstacles</em> such as: <strong>four-day Berghain benders, massive techno shoes, and the Bürgeramt appointment screen of death!</strong> But don't worry, she has the help of <em>power-ups</em> like <strong>oat milk, Sterni, and Döner kebabs</strong> to give her strength for a hot girl summer in Berlin! Simply use the space bar to help her jump.</p>
-            <img src="" alt class="space-bar-image"/>
+            <div id="emily-image"><img src="" alt class="emily-image"/></div>
+                
+                    <div id="intro">
+                        <h3>How to Play</h3>
+                        <p>After burning all bridges in Paris, Emily decided to jump on the Berlin bandwagon. Help her navigate her way through obstacles and collect power ups for a hot girl summer in Berlin!</p>
+                        <div><h4>Obstacles</h4><img src="images/obstacles-introduction.png" class="obstacles-intro"/>
+                        <h4>Power-Ups</h4><img src="images/power-ups-intro.png" class="power-ups-intro"/></div>
+                        <p><em>Avoid</em> the <strong>Bürgeramt screen of death, massive techno shoes, and four-day Berghain benders</strong> while <em>powering up</em> using <strong>Milk Lattes, Sterni, and Döner kebab.</strong>
+                            <br>Move with the space bar.</p>
+                    <img src="/images/space-bar.png" alt class="space-bar-image"/>
+                    </div>
+            <div id="start-button"> <button id="start-button">You Go, Girl!</button></div>       
         </div>
 
-        <div id="game-container"></div>
-        <div>
-            <h2>Vital Signs</h2>
-            <p>Lives: <span id="lives">4</span></p>
-            <p>Score: <span id="score">0</span></p>
-            <div id="game-port"></div>
-        </div>
+        
+            <div id="game-container">
+                <div>
+                    <h2>Vital Signs</h2>
+                    <p>Lives: <span id="lives">4</span></p>
+                    <p>Score: <span id="score">0</span></p>
+                    <div id="game-port"></div>
+                </div>
 
         <div id="game-over">
             <img src="" alt class="emily-image"/>
-            <h2>Too basic for Berlin</h2>
+            <h2>Too Basic for Berlin</h2>
             <hr>
             <button id="restart-game-button">Go Again, Girl!</button>
         </div>
