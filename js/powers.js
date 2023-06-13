@@ -2,7 +2,7 @@ class PowerUps {
   constructor(gamePort) {
     this.gamePort = gamePort;
     this.left = 1000;
-    this.top = Math.floor(Math.random() * 200 + 80);
+    this.top = Math.floor(Math.random() * 300 + 70);
     this.width = 100;
     this.height = 100;
     this.element = document.createElement("img");
@@ -11,6 +11,7 @@ class PowerUps {
       "/images/döner-power-up.png",
       "/images/oatly-power-up.png",
       "/images/sterni-power-up.png",
+      "/images/power-up-4.png",
     ];
     const randomChoice = Math.floor(Math.random() * randomPowerUps.length);
 
@@ -32,8 +33,8 @@ class PowerUps {
   }
 
   move() {
-        this.left -= 2;
-        this.updatePosition();
-        this.gamePort.appendChild(this.element);
+    this.left -= 1;
+    this.updatePosition();
+    this.gamePort.appendChild(this.element);
   }
 }

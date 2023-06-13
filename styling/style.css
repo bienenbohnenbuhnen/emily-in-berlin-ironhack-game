@@ -22,12 +22,31 @@ h1 {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
+  text-shadow: -2px 0 whitesmoke, 0 2px whitesmoke, 2px 0 whitesmoke,
+    0 -2px whitesmoke;
+}
+
+h2 {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: black;
+  text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke,
+    0 -1px whitesmoke;
 }
 
 h3 {
   font-size: 30px;
   display: flex;
   justify-content: center;
+  text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke,
+    0 -1px whitesmoke;
+}
+
+h4 {
+  text-shadow: -0.5px 0 whitesmoke, 0 0.5px whitesmoke, 0.5px 0 whitesmoke,
+    0 0.5px whitesmoke;
 }
 
 #start-button {
@@ -44,6 +63,7 @@ h3 {
   background-color: pink;
   display: flex;
   align-content: center;
+  margin-top: 60px;;
   padding: 10px 10px;
   border-radius: 10px;
 }
@@ -70,6 +90,7 @@ h3 {
   width: 100%;
   justify-content: center;
   padding: 20px 0px;
+  color: white;
 }
 
 #game-port {
@@ -80,6 +101,20 @@ h3 {
   background-image: url(/images/background-game-port.png);
   background-size: cover;
   animation: slide 4s linear infinite;
+}
+
+#vitals {
+  display: none;
+}
+
+#lives {
+  color: white;
+  padding-bottom: 30px;
+}
+
+#score{
+  color: white;
+  margin-bottom: 30px;
 }
 
 @keyframes slide {
@@ -110,5 +145,7 @@ h3 {
 }
 
 .emily-image {
-  width: 30%;
+  width: 50%;
+  display: flex;
+  border-radius: 50%;
 }
