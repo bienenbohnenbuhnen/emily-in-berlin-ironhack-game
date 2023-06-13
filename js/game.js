@@ -92,6 +92,7 @@ class Game {
       const powerUp = new PowerUps(this.gamePort);
       this.powerUps.push(powerUp);
     }, powerUpGenerationInterval);
+    
   }
 
   endGame() {
