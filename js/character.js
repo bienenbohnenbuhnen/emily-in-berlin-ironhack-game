@@ -1,6 +1,5 @@
 class Character {
   constructor(gamePort, left, top, width, height, imgSrc) {
-    console.log("Character constructor called");
     this.gamePort = gamePort;
     this.left = left;
     this.top = top;
@@ -41,7 +40,17 @@ class Character {
     this.element.style.top = `${this.top}px`;
   }
 
-  didCollide(obstacle) {}
+  didCollide(obstacle) {
+    const characterObj = this.element.getBoundingClientRect();
+    const obstacleObj = obstacle.element.getBoundingClientRect();
+
+    return !(
+      characterObj.right < obstacleObj.left ||
+      characterObj.left > obstacleObj.right ||
+      characterObj.bottom < obstacleObj.top ||
+      characterObj.top > obstacleObj.bottom
+    );
+  }
 
   didPowerUp(powerUp) {}
 }
