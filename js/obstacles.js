@@ -12,6 +12,7 @@ class Obstacles {
       "/images/obstacle-one.png",
       "/images/obstacle-two.png",
       "/images/obstacle-three.png",
+      "/images/obstacle-four.png",
     ];
     const randomIndex = Math.floor(Math.random() * randomObstacles.length);
 
@@ -32,7 +33,7 @@ class Obstacles {
   }
 
   move() {
-    this.left -= 3;
+    this.left -= 1;
     this.updatePosition();
     this.gamePort.appendChild(this.element);
   }

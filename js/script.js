@@ -57,4 +57,12 @@ window.onload = function () {
   }
   window.addEventListener("keyup", handleKeyup);
   window.addEventListener("keydown", handleKeydown);
+
+  restartGameButton.addEventListener("click", function () {
+    restartGame();
+  });
+
+  function restartGame() {
+    location.reload();
+  }
 };
