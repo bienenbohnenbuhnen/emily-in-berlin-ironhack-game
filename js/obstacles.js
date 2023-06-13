@@ -2,20 +2,20 @@ class Obstacles {
   constructor(gamePort) {
     console.log("working");
     this.gamePort = gamePort;
-    this.left = 100;
+    this.left = 1000;
     this.top = Math.floor(Math.random() * 300 + 70);
     this.width = 100;
     this.height = 100;
     this.element = document.createElement("img");
 
     const randomObstacles = [
-      "/images/obstacle-1-berghain.png",
-      "/images/obstacle-two-shoes.png",
-      "/images/obstacle-three-burgeramt.png",
+      "/images/obstacle-one.png",
+      "/images/obstacle-two.png",
+      "/images/obstacle-three.png",
     ];
     const randomIndex = Math.floor(Math.random() * randomObstacles.length);
 
-    this.element.src = `./images/${randomObstacles[randomIndex]}`;
+    this.element.src = `${randomObstacles[randomIndex]}`;
     console.log("images");
     this.element.style.position = "absolute";
     this.element.style.width = `${this.width}px`;

@@ -26,6 +26,7 @@ class Game {
     this.startScreen.style.display = "none";
     this.gamePort.style.display = "block";
     this.gameLoop();
+    this.startObstacleGeneration();
   }
 
   gameLoop() {
@@ -42,7 +43,39 @@ class Game {
 
   update() {
     this.character.move();
+
+    for (let i = 0; i < this.obstacles.length; i++) {
+      const obstacle = this.obstacles[i];
+      obstacle.move();
+
+      if (this.character.didCollide(obstacle)) {
+        obstacle.element.remove();
+        this.obstacles.splice(i, 1);
+        this.lives--;
+        i--;
+        document.getElementById("lives").innerHTML = `${this.lives}`;
+      }
+    }
+    if (this.lives === 0) {
+      this.endGame();
+    }
   }
 
-  endGame() {}
+  startObstacleGeneration() {
+    const obstacleGenerationInterval = 1500;
+    this.obstacleGenerationIntervalId = setInterval(() => {
+      const obstacle = new Obstacles(this.gamePort);
+      this.obstacles.push(obstacle);
+    }, obstacleGenerationInterval);
+  }
+
+  endGame() {
+    this.player.element.remove();
+    this.obstacles.forEach((obstacle) => obstacle.element.remove());
+
+    this.gameIsOver = true;
+
+    this.gamePort.style.display = "none";
+    this.gameOver.style.display = "block";
+  }
 }
