@@ -32,7 +32,7 @@ class Obstacles {
   }
 
   move() {
-    this.left -= 3;
+    this.left -= 2;
     this.updatePosition();
     this.gamePort.appendChild(this.element);
   }

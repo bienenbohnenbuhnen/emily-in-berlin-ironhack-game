@@ -52,5 +52,15 @@ class Character {
     );
   }
 
-  didPowerUp(powerUp) {}
+  didPowerUp(powerUp) {
+    const characterObj = this.element.getBoundingClientRect();
+    const powerUpObj = powerUp.element.getBoundingClientRect();
+
+    return !(
+      characterObj.right < powerUpObj.left ||
+      characterObj.left > powerUpObj.right ||
+      characterObj.bottom < powerUpObj.top ||
+      characterObj.top > powerUpObj.bottom
+    );
+  }
 }

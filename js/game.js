@@ -27,6 +27,7 @@ class Game {
     this.gamePort.style.display = "block";
     this.gameLoop();
     this.startObstacleGeneration();
+    this.startPowerUpGeneration();
   }
 
   gameLoop() {
@@ -59,6 +60,19 @@ class Game {
     if (this.lives === 0) {
       this.endGame();
     }
+
+    for (let j = 0; j < this.powerUps.length; j++) {
+      const powerUp = this.powerUps[j];
+      powerUp.move();
+
+      if (this.character.didCollide(powerUp)) {
+        powerUp.element.remove();
+        this.powerUps.slice[(j, 1)];
+        this.score++;
+        j++;
+        document.getElementById("score").innerHTML = `${this.score}`;
+      }
+    }
   }
 
   startObstacleGeneration() {
@@ -69,9 +83,18 @@ class Game {
     }, obstacleGenerationInterval);
   }
 
+  startPowerUpGeneration() {
+    const powerUpGenerationInterval = 1500;
+    this.powerUpGenerationIntervalId = setInterval(() => {
+      const powerUp = new PowerUps(this.gamePort);
+      this.powerUps.push(powerUp);
+    }, powerUpGenerationInterval);
+  }
+
   endGame() {
     this.player.element.remove();
     this.obstacles.forEach((obstacle) => obstacle.element.remove());
+    this.powerUps.forEach((powerUp) => powerUp.element.remove());
 
     this.gameIsOver = true;
 
