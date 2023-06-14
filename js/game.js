@@ -19,6 +19,9 @@ class Game {
     this.score = 0;
     this.lives = 4;
     this.gameIsOver = false;
+    this.highScore;
+    this.saveKeyScore = "highscore";
+    this.scoreStr = localStorage.getItem(this.saveKeyScore);
   }
 
   start() {
@@ -30,7 +33,6 @@ class Game {
     this.gameLoop();
     this.startObstacleGeneration();
     this.startPowerUpGeneration();
-    
   }
 
   gameLoop() {
@@ -76,6 +78,20 @@ class Game {
     if (this.lives === 0) {
       this.endGame();
     }
+
+    if (this.scoreStr == null) {
+      this.highScore = 0;
+      document.getElementById("high-score").innerHTML = `${this.highScore}`;
+    } else {
+      this.highScore = parseInt(this.scoreStr);
+      document.getElementById("high-score").innerHTML = `${this.highScore}`;
+    }
+
+    if (this.score > this.highScore) {
+      this.highScore = this.score;
+      localStorage.setItem(this.saveKeyScore, this.highScore);
+      document.getElementById("high-score").innerHTML = `${this.highScore}`;
+    }
   }
 
   startObstacleGeneration() {
@@ -92,7 +108,6 @@ class Game {
       const powerUp = new PowerUps(this.gamePort);
       this.powerUps.push(powerUp);
     }, powerUpGenerationInterval);
-    
   }
 
   endGame() {

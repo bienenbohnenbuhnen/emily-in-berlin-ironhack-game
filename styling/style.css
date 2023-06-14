@@ -49,6 +49,10 @@ h4 {
     0 0.5px whitesmoke;
 }
 
+#background {
+  background-image: url(/images/berlin-backg.gif);
+  background-size: 1600px 460px;
+}
 #start-button {
   font-size: 25px;
   background-color: pink;
@@ -56,6 +60,7 @@ h4 {
   align-content: center;
   padding: 10px 10px;
   border-radius: 10px;
+  border-style: dashed;
 }
 
 #restart-game-button {
@@ -63,7 +68,7 @@ h4 {
   background-color: pink;
   display: flex;
   align-content: center;
-  margin-top: 60px;;
+  margin-top: 60px;
   padding: 10px 10px;
   border-radius: 10px;
 }
@@ -75,7 +80,7 @@ h4 {
   align-items: center;
   flex-direction: column;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 #intro {
@@ -109,10 +114,13 @@ h4 {
 
 #lives {
   color: white;
-  padding-bottom: 30px;
 }
 
-#score{
+#score {
+  color: white;
+}
+
+#high-score {
   color: white;
   margin-bottom: 30px;
 }
@@ -137,11 +145,11 @@ h4 {
 }
 
 .obstacles-intro {
-  width: 40%;
+  width: 60%;
 }
 
 .power-ups-intro {
-  width: 30%;
+  width: 50%;
 }
 
 .emily-image {
