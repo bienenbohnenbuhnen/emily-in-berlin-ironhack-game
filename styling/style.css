@@ -16,21 +16,11 @@ body {
   font-family: "Pacifico", cursive;
 }
 
-h1 {
-  font-size: 70px;
-  padding-bottom: 100px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  text-shadow: -2px 0 whitesmoke, 0 2px whitesmoke, 2px 0 whitesmoke,
-    0 -2px whitesmoke;
-}
-
 h2 {
   font-size: 40px;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   color: black;
   text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke,
     0 -1px whitesmoke;
@@ -53,6 +43,18 @@ h4 {
   background-image: url(/images/berlin-backg.gif);
   background-size: 100% 62.5%;
 }
+
+#title {
+  height: 10vh;
+  font-size: 70px;
+  margin-top: 100px;
+  display: flex;
+  position: static;
+  justify-content: center;
+  text-shadow: -2px 0 whitesmoke, 0 2px whitesmoke, 2px 0 whitesmoke,
+    0 -2px whitesmoke;
+}
+
 #start-button {
   font-size: 25px;
   background-color: pink;
@@ -61,6 +63,7 @@ h4 {
   padding: 10px 10px;
   border-radius: 10px;
   border-style: dashed;
+  border-color: black;
   font-family: "Pacifico", cursive;
 }
 
@@ -72,12 +75,14 @@ h4 {
   margin-top: 60px;
   padding: 10px 10px;
   border-radius: 10px;
+  border-style: dashed;
+  border-color: black;
   font-family: "Pacifico", cursive;
 }
 
 #game-start-screen {
-  width: 80vh;
-  max-height: 30vh;
+  width: 50%;
+  height: 90%;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -86,7 +91,11 @@ h4 {
 }
 
 #intro {
-  width: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
   border-style: dashed;
   border-radius: 10px;
   background-color: #ffc1cb;
@@ -95,9 +104,14 @@ h4 {
   padding-right: 2%;
 }
 
+#how-to-play-h3 {
+  display: flex;
+}
+
 #game-container {
   display: block;
   width: 100%;
+  height: 60%;
   justify-content: center;
   padding: 20px 0px;
   color: white;
@@ -114,20 +128,32 @@ h4 {
 }
 
 #vitals {
+  font-size: 1.4em;
+  font-weight: 1000;
   display: none;
+  color: black;
+  text-shadow: -0.5px 0 whitesmoke, 0 0.5px whitesmoke, 0.5px 0 whitesmoke,
+    0 0.5px whitesmoke;
+  margin-bottom: 5px;
 }
 
 #lives {
-  color: white;
+  color: black;
+  text-shadow: -0.5px 0 whitesmoke, 0 0.5px whitesmoke, 0.5px 0 whitesmoke,
+    0 0.5px whitesmoke;
 }
 
 #score {
-  color: white;
+  color: black;
+  text-shadow: -0.5px 0 whitesmoke, 0 0.5px whitesmoke, 0.5px 0 whitesmoke,
+    0 0.5px whitesmoke;
 }
 
 #high-score {
-  color: white;
+  color: black;
   margin-bottom: 30px;
+  text-shadow: -0.5px 0 whitesmoke, 0 0.5px whitesmoke, 0.5px 0 whitesmoke,
+    0 0.5px whitesmoke;
 }
 
 @keyframes slide {
@@ -144,21 +170,23 @@ h4 {
 }
 
 .arrow-keys {
-  width: 10%;
-  padding: 10px 10px 10px 10px;
-  margin: 0px 0px 0px 0px;
+  display: flex;
+  align-content: center;
+  width: 6%;
+  height: 8%;
 }
 
 .obstacles-intro {
-  width: 80%;
+  width: 60%;
+  display: flex;
 }
 
 .power-ups-intro {
-  width: 80%;
+  width: 60%;
+  display: flex;
 }
 
 .emily-image {
   width: 50%;
   display: flex;
-  border-radius: 50%;
 }

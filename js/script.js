@@ -28,10 +28,10 @@ window.onload = function () {
 
       switch (key) {
         case "ArrowUp":
-          game.character.directionY = -1;
+          game.character.directionY = -2;
           break;
         case "ArrowDown":
-          game.character.directionY = 1;
+          game.character.directionY = 2;
           break;
       }
     }
