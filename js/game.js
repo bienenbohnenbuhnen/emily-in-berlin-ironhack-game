@@ -77,7 +77,7 @@ class Game {
         document.getElementById("score").innerHTML = `${this.score}`;
       }
     }
-    /*
+
     if (this.score >= 500 && this.score < 1000) {
       clearInterval(this.obstacleGenerationIntervalId);
       this.obstacleGenerationInterval = 1250;
@@ -93,7 +93,7 @@ class Game {
         this.obstacles.push(obstacle);
       }, this.obstacleGenerationInterval);
     }
-
+    /*
     if (this.score >= 500 && this.score < 1000) {
       clearInterval(this.powerUpGenerationIntervalId);
       this.powerUpGenerationInterval = 1450;
@@ -108,8 +108,8 @@ class Game {
         const powerUp = new PowerUps(this.gamePort);
         this.powerUps.push(powerUp);
       }, this.powerUpGenerationInterval);
-    } */
-
+    }
+    */
     if (this.lives === 0) {
       this.endGame();
     }
