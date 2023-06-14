@@ -33,7 +33,7 @@ class PowerUps {
   }
 
   move() {
-    this.left -= 1;
+    this.left -= 3;
     this.updatePosition();
     this.gamePort.appendChild(this.element);
   }

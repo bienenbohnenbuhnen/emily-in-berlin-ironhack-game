@@ -5,7 +5,7 @@
 
 body {
   margin: 0px;
-  height: 100vh;
+  height: 80vh;
   max-width: 100%;
   background: pink; /*add image later*/
   display: flex;
@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Pacifico", cursive;
 }
 
 h1 {
@@ -51,7 +51,7 @@ h4 {
 
 #background {
   background-image: url(/images/berlin-backg.gif);
-  background-size: 1600px 460px;
+  background-size: 100% 62.5%;
 }
 #start-button {
   font-size: 25px;
@@ -61,6 +61,7 @@ h4 {
   padding: 10px 10px;
   border-radius: 10px;
   border-style: dashed;
+  font-family: "Pacifico", cursive;
 }
 
 #restart-game-button {
@@ -71,23 +72,27 @@ h4 {
   margin-top: 60px;
   padding: 10px 10px;
   border-radius: 10px;
+  font-family: "Pacifico", cursive;
 }
 
 #game-start-screen {
-  width: 60vh;
-  max-height: 50vh;
+  width: 80vh;
+  max-height: 30vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   align-content: center;
   justify-content: space-around;
 }
 
 #intro {
+  width: 90vh;
   border-style: dashed;
   border-radius: 10px;
   background-color: #ffc1cb;
   line-height: 1.5;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 #game-container {
@@ -145,11 +150,11 @@ h4 {
 }
 
 .obstacles-intro {
-  width: 60%;
+  width: 80%;
 }
 
 .power-ups-intro {
-  width: 50%;
+  width: 80%;
 }
 
 .emily-image {

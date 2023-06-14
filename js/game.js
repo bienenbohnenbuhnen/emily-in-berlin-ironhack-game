@@ -22,6 +22,8 @@ class Game {
     this.highScore;
     this.saveKeyScore = "highscore";
     this.scoreStr = localStorage.getItem(this.saveKeyScore);
+    this.obstacleGenerationInterval = 1750;
+    this.powerUpGenerationInterval = 1900;
   }
 
   start() {
@@ -75,6 +77,39 @@ class Game {
         document.getElementById("score").innerHTML = `${this.score}`;
       }
     }
+    /*
+    if (this.score >= 500 && this.score < 1000) {
+      clearInterval(this.obstacleGenerationIntervalId);
+      this.obstacleGenerationInterval = 1250;
+      this.obstacleGenerationIntervalId = setInterval(() => {
+        const obstacle = new Obstacles(this.gamePort);
+        this.obstacles.push(obstacle);
+      }, this.obstacleGenerationInterval);
+    } else if (this.score >= 1000) {
+      clearInterval(this.obstacleGenerationIntervalId);
+      this.obstacleGenerationInterval = 750;
+      this.obstacleGenerationIntervalId = setInterval(() => {
+        const obstacle = new Obstacles(this.gamePort);
+        this.obstacles.push(obstacle);
+      }, this.obstacleGenerationInterval);
+    }
+
+    if (this.score >= 500 && this.score < 1000) {
+      clearInterval(this.powerUpGenerationIntervalId);
+      this.powerUpGenerationInterval = 1450;
+      this.powerUpGenerationIntervalId = setInterval(() => {
+        const powerUp = new PowerUps(this.gamePort);
+        this.powerUps.push(powerUp);
+      }, this.powerUpGenerationInterval);
+    } else if (this.score >= 1000) {
+      clearInterval(this.powerUpGenerationIntervalId);
+      this.powerUpGenerationInterval = 900;
+      this.powerUpGenerationIntervalId = setInterval(() => {
+        const powerUp = new PowerUps(this.gamePort);
+        this.powerUps.push(powerUp);
+      }, this.powerUpGenerationInterval);
+    } */
+
     if (this.lives === 0) {
       this.endGame();
     }
@@ -95,19 +130,17 @@ class Game {
   }
 
   startObstacleGeneration() {
-    let obstacleGenerationInterval = 2500;
     this.obstacleGenerationIntervalId = setInterval(() => {
       const obstacle = new Obstacles(this.gamePort);
       this.obstacles.push(obstacle);
-    }, obstacleGenerationInterval);
+    }, this.obstacleGenerationInterval);
   }
 
   startPowerUpGeneration() {
-    let powerUpGenerationInterval = 2750;
     this.powerUpGenerationIntervalId = setInterval(() => {
       const powerUp = new PowerUps(this.gamePort);
       this.powerUps.push(powerUp);
-    }, powerUpGenerationInterval);
+    }, this.powerUpGenerationInterval);
   }
 
   endGame() {
