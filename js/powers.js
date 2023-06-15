@@ -2,7 +2,7 @@ class PowerUps {
   constructor(gamePort) {
     this.gamePort = gamePort;
     this.left = 1000;
-    this.top = Math.floor(Math.random() * 300 + 70);
+    this.top = Math.floor(Math.random() * 350 + 70);
     this.width = 100;
     this.height = 100;
     this.element = document.createElement("img");

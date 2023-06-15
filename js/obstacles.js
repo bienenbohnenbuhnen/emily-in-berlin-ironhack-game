@@ -3,7 +3,7 @@ class Obstacles {
     console.log("working");
     this.gamePort = gamePort;
     this.left = 1000;
-    this.top = Math.floor(Math.random() * 300 + 70);
+    this.top = Math.floor(Math.random() * 350 + 70);
     this.width = 90;
     this.height = 90;
     this.element = document.createElement("img");
