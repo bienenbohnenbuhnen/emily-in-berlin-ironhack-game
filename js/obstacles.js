@@ -1,6 +1,5 @@
 class Obstacles {
   constructor(gamePort) {
-    console.log("working");
     this.gamePort = gamePort;
     this.left = 1000;
     this.top = Math.floor(Math.random() * 350 + 70);
@@ -17,7 +16,6 @@ class Obstacles {
     const randomIndex = Math.floor(Math.random() * randomObstacles.length);
 
     this.element.src = `${randomObstacles[randomIndex]}`;
-    console.log("images");
     this.element.style.position = "absolute";
     this.element.style.width = `${this.width}px`;
     this.element.style.height = `${this.height}px`;

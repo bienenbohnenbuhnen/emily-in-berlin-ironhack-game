@@ -16,7 +16,6 @@ class PowerUps {
     const randomChoice = Math.floor(Math.random() * randomPowerUps.length);
 
     this.element.src = `${randomPowerUps[randomChoice]}`;
-    console.log("called");
 
     this.element.style.position = "absolute";
     this.element.style.width = `${this.width}px`;
