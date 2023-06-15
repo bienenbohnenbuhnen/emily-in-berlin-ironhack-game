@@ -4,6 +4,7 @@ class Game {
     this.gamePort = document.getElementById("game-port");
     this.gameOverScreen = document.getElementById("game-over");
     this.vitals = document.getElementById("vitals");
+    this.myMusic = document.getElementById("music");
     this.character = new Character(
       this.gamePort,
       50,
@@ -22,9 +23,8 @@ class Game {
     this.highScore;
     this.saveKeyScore = "highscore";
     this.scoreStr = localStorage.getItem(this.saveKeyScore);
-    this.obstacleGenerationInterval = 1750;
-    this.powerUpGenerationInterval = 1900;
-    this.myMusic = document.createElement("audio");
+    this.obstacleGenerationInterval = 1000;
+    this.powerUpGenerationInterval = 1100;
   }
 
   start() {
@@ -36,8 +36,8 @@ class Game {
     this.gameLoop();
     this.startObstacleGeneration();
     this.startPowerUpGeneration();
-    this.myMusic = new sound("music/shake-it-off-game-music.mp3");
-    this.myMusic.play()
+
+    this.myMusic.play();
   }
 
   gameLoop() {

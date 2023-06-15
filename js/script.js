@@ -1,19 +1,27 @@
 window.onload = function () {
   const startGameButton = document.getElementById("start-button");
   const restartGameButton = document.getElementById("restart-game-button");
+  const music = document.getElementById("music");
 
+  playMusic();
+  
   let game;
 
   startGameButton.addEventListener("click", function () {
     startGame();
   });
 
+  function playMusic() {
+    music.play();
+  }
   function startGame() {
     console.log("start game");
     game = new Game();
-  
+
     game.start();
+
   }
+
 
   function handleKeydown(event) {
     const key = event.key;
