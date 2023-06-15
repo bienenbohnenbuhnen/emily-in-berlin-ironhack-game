@@ -6,11 +6,16 @@ This is a web browser-based game which combines HTML to structure the page and i
 
 The game is inspired by the experiences I and others have been exposed to since moving to Berlin from abroad; the obstacles and power-ups are tongue-in-cheek references to these experiences. The game also draws on the Netflix show 'Emily in Paris' for generating the character, who arrives in Paris somewhat oblivious to the culture, life in country, and social norms.
 
+---
+
 ## Getting Started
 
-Due to the basic nature of the project, it does not involve much specialised software to modify it once you have forked the GitHub repository. Here is what was used while developing the game:
+Due to the basic nature of the project, it does not involve much specialised software to modify it once you have forked the [GitHub repository] (https://github.com/bienenbohnenbuhnen/emily-in-berlin-ironhack-game). Alternatively, you can play the game on your browser [here] (https://bienenbohnenbuhnen.github.io/emily-in-berlin-ironhack-game/).
+Here is what was used while developing the game:
 - Visual Studio Code
 - Live Server to run a development local server in your chosen browser
+
+---
 
 ## Usage
 
@@ -53,6 +58,7 @@ There are three main elements to the game over screen.
 
 3. A restart game button.
 
+---
 
 ## Future Tweaks
 
@@ -61,6 +67,10 @@ There are a few possible improvements to be added to the game. However, there is
 - Increasing difficulty levels
 - Toggle button to turn the music off
 - Randomly generated main character looks
+
+Any feedback on the functionality of the game would be greatly appreciated.
+
+---
 
 ## Contributors
 
