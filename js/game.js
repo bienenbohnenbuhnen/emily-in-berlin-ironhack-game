@@ -24,7 +24,7 @@ class Game {
     this.saveKeyScore = "highscore";
     this.scoreStr = localStorage.getItem(this.saveKeyScore);
     this.obstacleGenerationInterval = 1000;
-    this.powerUpGenerationInterval = 1100;
+    this.powerUpGenerationInterval = 1150;
   }
 
   start() {

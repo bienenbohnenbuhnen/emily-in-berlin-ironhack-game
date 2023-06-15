@@ -46,6 +46,30 @@ h4 {
   background-size: 100% 62.5%;
 }
 
+#unmute-button {
+  background-color: pink;
+  border-radius: 10px;
+  border-style: dashed;
+  border-color: black;
+  position: fixed;
+  top: 10%;
+  left: 10%; 
+  display: inline-flex;
+  justify-content: flex-start;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+
+  width: 70px;
+}
+
+#unmute-button img {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  padding: 4% 20% 0% 0%;
+}
+
 #title {
   height: 10vh;
   font-size: 70px;

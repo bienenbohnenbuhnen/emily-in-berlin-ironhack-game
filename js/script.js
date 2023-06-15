@@ -1,14 +1,15 @@
 window.onload = function () {
   const startGameButton = document.getElementById("start-button");
   const restartGameButton = document.getElementById("restart-game-button");
-  const musicStartClick = document.getElementById("background");
+  const unmuteButton = document.getElementById("unmute-button");
   const music = document.getElementById("music");
-
-  musicStartClick.addEventListener("click", function () {
-    playMusic();
-  });
+  music
 
   let game;
+
+  unmuteButton.addEventListener("click", function () {
+    playMusic();
+  });
 
   startGameButton.addEventListener("click", function () {
     startGame();
