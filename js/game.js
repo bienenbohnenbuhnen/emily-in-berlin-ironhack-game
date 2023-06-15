@@ -4,7 +4,6 @@ class Game {
     this.gamePort = document.getElementById("game-port");
     this.gameOverScreen = document.getElementById("game-over");
     this.vitals = document.getElementById("vitals");
-    this.myMusic = document.getElementById("music");
     this.character = new Character(
       this.gamePort,
       50,
@@ -20,13 +19,14 @@ class Game {
     this.score = 0;
     this.lives = 4;
     this.gameIsOver = false;
+    //Creates key to store and retrieve high scores from the browser's local storage
     this.highScore;
     this.saveKeyScore = "highscore";
     this.scoreStr = localStorage.getItem(this.saveKeyScore);
     this.obstacleGenerationInterval = 1000;
     this.powerUpGenerationInterval = 1150;
   }
-
+  //Sets viewport dimensions, starts game loop, calls powerup & obstacle generation methods
   start() {
     this.gamePort.style.width = `${this.width}px`;
     this.gamePort.style.height = `${this.height}px`;
@@ -37,9 +37,9 @@ class Game {
     this.startObstacleGeneration();
     this.startPowerUpGeneration();
 
-    this.myMusic.play();
   }
 
+  //Allows game restart, character & object interaction
   gameLoop() {
     if (this.gameIsOver) {
       return;
@@ -50,6 +50,7 @@ class Game {
     window.requestAnimationFrame(() => this.gameLoop());
   }
 
+//Controls character movement, object ineraction & scoring system
   update() {
     this.character.move();
 
@@ -97,6 +98,7 @@ class Game {
     }
   }
 
+//Sets up interval with callback function creating a new obstacle and pushing to obstacle array  
   startObstacleGeneration() {
     this.obstacleGenerationIntervalId = setInterval(() => {
       const obstacle = new Obstacles(this.gamePort);
@@ -111,6 +113,7 @@ class Game {
     }, this.powerUpGenerationInterval);
   }
 
+  //Removes all game elements and displays game over screen
   endGame() {
     this.character.element.remove();
     this.obstacles.forEach((obstacle) => obstacle.element.remove());

@@ -7,6 +7,7 @@ class PowerUps {
     this.height = 100;
     this.element = document.createElement("img");
 
+      //Creates array of possible powerups, then randomises, rounded to integer
     const randomPowerUps = [
       "images/döner-power-up.png",
       "images/oatly-power-up.png",
@@ -25,12 +26,12 @@ class PowerUps {
 
     this.gamePort.appendChild(this.element);
   }
-
+//Enables position of powerups to change along x and y axes
   updatePosition() {
     this.element.style.left = `${this.left}px`;
     this.element.style.top = `${this.top}px`;
   }
-
+//Sets the rate at which the objects move
   move() {
     this.left -= 4;
     this.updatePosition();

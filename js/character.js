@@ -16,7 +16,7 @@ class Character {
     this.element.style.height = `${height}px`;
     this.gamePort.appendChild(this.element);
   }
-
+//Enables & sets parameters in which the character can move
   move() {
     this.left += this.directionX;
     this.top += this.directionY;
@@ -39,7 +39,7 @@ class Character {
     this.element.style.left = `${this.left}px`;
     this.element.style.top = `${this.top}px`;
   }
-
+//Provides dimensions & position of obstacle/powerup and whether or not it collides with the character
   didCollide(obstacle) {
     const characterObj = this.element.getBoundingClientRect();
     const obstacleObj = obstacle.element.getBoundingClientRect();

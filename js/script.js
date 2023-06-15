@@ -3,10 +3,10 @@ window.onload = function () {
   const restartGameButton = document.getElementById("restart-game-button");
   const unmuteButton = document.getElementById("unmute-button");
   const music = document.getElementById("music");
-  music
+  music;
 
   let game;
-
+  //Unmutes music upon click
   unmuteButton.addEventListener("click", function () {
     playMusic();
   });
@@ -27,12 +27,7 @@ window.onload = function () {
 
   function handleKeydown(event) {
     const key = event.key;
-    const possibleKeystrokes = [
-      "ArrowLeft",
-      "ArrowUp",
-      "ArrowRight",
-      "ArrowDown",
-    ];
+    const possibleKeystrokes = ["ArrowUp", "ArrowDown"];
     if (possibleKeystrokes.includes(key)) {
       event.preventDefault();
 
@@ -48,12 +43,7 @@ window.onload = function () {
   }
   function handleKeyup(event) {
     const key = event.key;
-    const possibleKeystrokes = [
-      "ArrowLeft",
-      "ArrowUp",
-      "ArrowRight",
-      "ArrowDown",
-    ];
+    const possibleKeystrokes = ["ArrowUp", "ArrowDown"];
     if (possibleKeystrokes.includes(key)) {
       event.preventDefault();
 
