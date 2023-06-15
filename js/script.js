@@ -1,10 +1,13 @@
 window.onload = function () {
   const startGameButton = document.getElementById("start-button");
   const restartGameButton = document.getElementById("restart-game-button");
+  const musicStartClick = document.getElementById("background");
   const music = document.getElementById("music");
 
-  playMusic();
-  
+  musicStartClick.addEventListener("click", function () {
+    playMusic();
+  });
+
   let game;
 
   startGameButton.addEventListener("click", function () {
@@ -19,9 +22,7 @@ window.onload = function () {
     game = new Game();
 
     game.start();
-
   }
-
 
   function handleKeydown(event) {
     const key = event.key;
