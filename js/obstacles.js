@@ -9,10 +9,10 @@ class Obstacles {
     this.element = document.createElement("img");
 
     const randomObstacles = [
-      "/images/obstacle-one.png",
-      "/images/obstacle-two.png",
-      "/images/obstacle-three.png",
-      "/images/obstacle-four.png",
+      "images/obstacle-one.png",
+      "images/obstacle-two.png",
+      "images/obstacle-three.png",
+      "images/obstacle-four.png",
     ];
     const randomIndex = Math.floor(Math.random() * randomObstacles.length);
 

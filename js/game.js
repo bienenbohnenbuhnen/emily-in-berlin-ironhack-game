@@ -10,7 +10,7 @@ class Game {
       300,
       90,
       90,
-      "/images/main-character.png"
+      "images/main-character.png"
     );
     this.height = 500;
     this.width = 1000;

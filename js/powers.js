@@ -8,10 +8,10 @@ class PowerUps {
     this.element = document.createElement("img");
 
     const randomPowerUps = [
-      "/images/döner-power-up.png",
-      "/images/oatly-power-up.png",
-      "/images/sterni-power-up.png",
-      "/images/power-up-spargel.png",
+      "images/döner-power-up.png",
+      "images/oatly-power-up.png",
+      "images/sterni-power-up.png",
+      "images/power-up-spargel.png",
     ];
     const randomChoice = Math.floor(Math.random() * randomPowerUps.length);
 
