@@ -24,6 +24,7 @@ class Game {
     this.scoreStr = localStorage.getItem(this.saveKeyScore);
     this.obstacleGenerationInterval = 1750;
     this.powerUpGenerationInterval = 1900;
+    this.myMusic = document.createElement("audio");
   }
 
   start() {
@@ -35,6 +36,8 @@ class Game {
     this.gameLoop();
     this.startObstacleGeneration();
     this.startPowerUpGeneration();
+    this.myMusic = new sound("music/shake-it-off-game-music.mp3");
+    this.myMusic.play()
   }
 
   gameLoop() {

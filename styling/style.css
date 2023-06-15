@@ -35,12 +35,14 @@ h3 {
 }
 
 h4 {
+  margin-top: 2%;
+  margin-bottom: 2%;
   text-shadow: -0.5px 0 whitesmoke, 0 0.5px whitesmoke, 0.5px 0 whitesmoke,
     0 0.5px whitesmoke;
 }
 
 #background {
-  background-image: url(images/berlin-backg.gif);
+  background-image: url(./images/berlin-backg.gif);
   background-size: 100% 62.5%;
 }
 
@@ -127,7 +129,7 @@ h4 {
   align-content: center;
   overflow: hidden;
   position: relative;
-  background-image: url(images/background-game-port.png);
+  background-image: url(./images/background-game-port.png);
   background-size: cover;
   animation: slide 4s linear infinite;
 }
